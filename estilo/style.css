@@ -10,7 +10,27 @@ $83e1ad
 */
 
 @charset "UTF-8";
+@media (max-width: 768px) {
+    .container {
+        height: 400px; 
+    }
 
+    .content {
+        font-size: 24px; 
+    }
+
+}
+
+
+@media (min-width: 769px) {
+    .container {
+        height: 800px;
+    }
+
+    .content {
+        font-size: 36px; 
+    }
+}
 @font-face{
     font-family: idroid;
     src:url('../fontes/idroid.otf') format('opentype');
@@ -49,17 +69,43 @@ $83e1ad
             font-weight: bold;
             transition-duration: 0.4s;
         }
-        h1{
+        
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh; 
+            background-image: url('../imagens/fundo.jpg');
+            
+           
+            background-size: cover;
+            background-attachment: fixed; 
+            color: #fff; 
+        }
+        .content {
+            position: absolute;
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            text-align: center; 
+        }
+        .container>p{
+            text-align: center;
+            margin: auto;
+        }
+        .container>h1{
             text-decoration: none;
             color: #ffffff;
-            
-            /* background: rgb(0, 0, 0);
+            text-align: center;
+            font-size: 1.9em;
+            background: rgb(0, 0, 0);
             padding-left: 30px;
+            padding-top: 10px;
             padding-right: 30px;
             width: 500px;
             border-radius: 50px;
-            margin: auto; */
+            margin: auto;
         }
+       
         .menu{
                 background: rgb(255, 255, 255);
                 border-radius: 50%;
@@ -101,7 +147,7 @@ $83e1ad
             display: none;
           }
           input:checked ~ label .menu{
-            box-shadow: 0 0 0 130vw #ffffff, 0 0 0 130vw #ffffff;
+            box-shadow: 0 0 0 500vh #ffffff, 0 0 0 500vh #ffffff;
           }          
           input:checked ~ label .seta{
             transform: rotate(-147deg);
@@ -166,16 +212,9 @@ $83e1ad
             box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.384);
             padding-top: 40px;
         }
-        header p{
+        header>p{
             padding: 30px 0px 0px;
         }
-        nav{
-            background-color: var(--cor5);
-            padding: 20px;
-            box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.377);
-            text-align: right;
-        }
-
         main {
 
             min-width: 300px;
